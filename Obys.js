@@ -220,18 +220,26 @@ function footerAnimation() {
   });
 }
 
-footerAnimation();
 
 
-footerAnimation();
+function applyAnimations() {
+  loadingAnimation();
+  cursorAnimation();
+  flagAnimation();
+  footerAnimation();
 
+  // Check if the screen width is greater than 600px
+  if (window.matchMedia("(min-width: 601px)").matches) {
+      locomotiveAnimation();
+      sheryAnimation();
+  }
+}
 
-loadingAnimation();
-cursorAnimation();
-locomotiveAnimation();
-sheryAnimation();
-flagAnimation();
-footerAnimation();
+// Initial application of animations
+applyAnimations();
+
+// Optional: Reapply animations when the window is resized
+window.addEventListener('resize', applyAnimations);
 
 
 
