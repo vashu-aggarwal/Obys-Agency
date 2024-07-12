@@ -224,13 +224,14 @@ function footerAnimation() {
 
 function applyAnimations() {
   loadingAnimation();
-  cursorAnimation();
-  flagAnimation();
-  footerAnimation();
+  
 
   // Check if the screen width is greater than 600px
   if (window.matchMedia("(min-width: 601px)").matches) {
       locomotiveAnimation();
+      cursorAnimation();
+      flagAnimation();
+      footerAnimation();
       sheryAnimation();
   }
 }
